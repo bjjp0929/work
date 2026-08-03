@@ -1056,10 +1056,9 @@ footer {
   transform: translateY(-3px);
 }
 
-/* ===== FIX: AI 名片專案按鈕與圖示位置 =====
-   只調整第一個專案，不影響第 02、03 個專案與其他區塊。
-*/
-.project-list > .project-card:first-child {
+
+/* ===== 通用專案卡片：有 project-actions 的專案自動使用四欄 ===== */
+.project-card:has(.project-actions) {
   grid-template-columns:
     90px
     minmax(0, 1fr)
@@ -1067,14 +1066,14 @@ footer {
     260px;
 }
 
-.project-list > .project-card:first-child .project-actions {
+.project-card:has(.project-actions) .project-actions {
   grid-column: 3;
   grid-row: 1;
-align-self: end;
-padding-bottom: 8px;
+  align-self: end;
+  padding-bottom: 8px;
 }
 
-.project-list > .project-card:first-child .project-icon {
+.project-card:has(.project-actions) .project-icon {
   grid-column: 4;
   grid-row: 1;
   width: 260px;
@@ -1082,22 +1081,24 @@ padding-bottom: 8px;
 }
 
 @media (max-width: 1080px) {
-  .project-list > .project-card:first-child {
+  .project-card:has(.project-actions) {
     grid-template-columns:
       70px
       minmax(0, 1fr)
       220px;
   }
 
-  .project-list > .project-card:first-child .project-actions {
+  .project-card:has(.project-actions) .project-actions {
     grid-column: 2;
     grid-row: 2;
+    align-self: start;
     flex-wrap: wrap;
     gap: 18px;
     margin-top: 4px;
+    padding-bottom: 0;
   }
 
-  .project-list > .project-card:first-child .project-icon {
+  .project-card:has(.project-actions) .project-icon {
     grid-column: 3;
     grid-row: 1 / span 2;
     width: 220px;
@@ -1105,17 +1106,17 @@ padding-bottom: 8px;
 }
 
 @media (max-width: 760px) {
-  .project-list > .project-card:first-child {
+  .project-card:has(.project-actions) {
     grid-template-columns: 46px minmax(0, 1fr);
   }
 
-  .project-list > .project-card:first-child .project-actions {
+  .project-card:has(.project-actions) .project-actions {
     grid-column: 2;
     grid-row: auto;
     white-space: normal;
   }
 
-  .project-list > .project-card:first-child .project-icon {
+  .project-card:has(.project-actions) .project-icon {
     grid-column: 1 / -1;
     grid-row: auto;
     width: 100%;
