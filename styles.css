@@ -1029,9 +1029,12 @@ footer {
 
 .project-actions {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
   gap: 28px;
-  margin-top: 24px;
+  margin-top: 0;
+  white-space: nowrap;
 }
 
 .project-action-link {
@@ -1050,11 +1053,5 @@ footer {
 .project-action-link:hover {
   color: var(--violet);
   border-color: var(--violet);
-  transform: translateX(4px);
-}
-
-@media (max-width: 760px) {
-  .project-actions {
-    gap: 18px;
-  }
+  transform: translateY(-3px);
 }
