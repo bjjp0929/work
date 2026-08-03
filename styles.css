@@ -941,3 +941,103 @@ footer {
   border-color: var(--violet);
   transform: translateX(4px);
 }
+
+
+.contact-section {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(42px, 7vw, 90px);
+  border-radius: 44px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(113, 87, 232, 0.35),
+      transparent 25rem
+    ),
+    var(--lime);
+  box-shadow: 0 24px 80px rgba(34, 30, 22, 0.12);
+}
+
+.contact-card::after {
+  content: "↗";
+  position: absolute;
+  right: clamp(20px, 5vw, 70px);
+  bottom: -30px;
+  color: rgba(23, 24, 23, 0.08);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(9rem, 20vw, 20rem);
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.contact-card .eyebrow {
+  color: var(--violet);
+}
+
+.contact-card h2 {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 6rem);
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+
+.contact-text {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 28px 0 34px;
+  color: rgba(23, 24, 23, 0.72);
+  font-size: 1.08rem;
+}
+
+.contact-mail {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid var(--ink);
+  font-family: "Space Grotesk", "Noto Sans TC", sans-serif;
+  font-size: clamp(1.15rem, 2.3vw, 2rem);
+  font-weight: 700;
+  transition: 0.22s ease;
+}
+
+.contact-mail:hover {
+  color: var(--violet);
+  border-color: var(--violet);
+  transform: translateY(-3px);
+}
+
+.contact-mail span {
+  transition: transform 0.22s ease;
+}
+
+.contact-mail:hover span {
+  transform: translate(5px, -5px);
+}
+
+@media (max-width: 760px) {
+  .contact-card {
+    border-radius: 30px;
+  }
+
+  .contact-card h2 br {
+    display: none;
+  }
+
+  .contact-mail {
+    align-items: flex-start;
+    word-break: break-all;
+  }
+}
