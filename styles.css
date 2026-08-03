@@ -926,3 +926,18 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
+.project-case-link {
+  display: inline-flex;
+  margin-top: 22px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--ink);
+  font-weight: 700;
+  transition: 0.22s ease;
+}
+
+.project-case-link:hover {
+  color: var(--violet);
+  border-color: var(--violet);
+  transform: translateX(4px);
+}
