@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI 名片管家專案案例：從名片建檔痛點到可使用的批次資料整理工具。" />
+  <title>AI 名片管家｜林凰予作品集</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body class="project-page">
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="回到作品集首頁">
+      <span class="brand-mark">凰</span>
+      <span class="brand-name">LIN HUANGYU</span>
+    </a>
+
+    <a class="project-back" href="index.html#projects">← 返回精選專案</a>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="project-hero-copy">
+        <div class="project-breadcrumb">
+          <span>SELECTED PROJECT 01</span>
+          <span>2026</span>
+        </div>
+
+        <h1>AI 名片管家</h1>
+
+        <p class="project-deck">
+          從每日名片建檔的重複工作出發，將多語辨識、批次輸入、欄位修正與資料下載整合成一個可直接使用的網頁工具。
+        </p>
+
+        <div class="project-facts">
+          <div>
+            <span>角色</span>
+            <strong>需求整理・流程設計・QA・網頁實作</strong>
+          </div>
+          <div>
+            <span>工具</span>
+            <strong>HTML・CSS・JavaScript・OCR・GitHub Pages</strong>
+          </div>
+          <div>
+            <span>專案性質</span>
+            <strong>自主發現問題並實作改善方案</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-hero-art" aria-hidden="true">
+        <div class="hero-grid-card">
+          <div class="grid-toolbar">
+            <i></i><i></i><i></i>
+            <b>BUSINESS CARD MANAGER</b>
+          </div>
+          <div class="grid-table">
+            <span>姓名</span><span>公司</span><span>電話</span><span>信箱</span>
+            <strong>김민지</strong><strong>ABC Partners</strong><strong>010-0000</strong><strong>hello@abc.kr</strong>
+            <strong>林先生</strong><strong>OO 科技</strong><strong>02-0000</strong><strong>info@oo.tw</strong>
+            <strong>佐藤</strong><strong>Tokyo Lab</strong><strong>03-0000</strong><strong>mail@tokyo.jp</strong>
+          </div>
+          <div class="grid-footer">
+            <span>CSV DOWNLOAD</span>
+            <span>MULTILINGUAL OCR</span>
+          </div>
+        </div>
+
+        <div class="project-sticker sticker-one">BATCH INPUT</div>
+        <div class="project-sticker sticker-two">QA → ITERATE</div>
+      </div>
+    </section>
+
+    <section class="project-summary-strip">
+      <div>
+        <span class="summary-number">42</span>
+        <p>單日實際處理名片數量</p>
+      </div>
+      <div>
+        <span class="summary-number">4</span>
+        <p>支援中・英・韓・日多語資料</p>
+      </div>
+      <div>
+        <span class="summary-number">1</span>
+        <p>從需求到部署的可使用工具</p>
+      </div>
+    </section>
+
+    <section class="case-section case-problem">
+      <div class="case-index">
+        <span>01</span>
+        <p>THE PROBLEM</p>
+      </div>
+
+      <div class="case-content">
+        <p class="case-kicker">發生了什麼問題</p>
+        <h2>大量名片等待建檔，真正的瓶頸不只是在「輸入很慢」。</h2>
+
+        <div class="case-columns">
+          <p>
+            公司累積大量未建檔名片，人工逐張輸入姓名、公司、電話、信箱與地址，不只耗時，也容易因語言、欄位順序與格式差異產生錯誤。
+          </p>
+          <p>
+            現成名片辨識服務有付費限制，也未必符合實際工作流程。即使辨識成功，仍需要反覆切換畫面、修正欄位、重新命名與整理資料。
+          </p>
+        </div>
+
+        <div class="pain-grid">
+          <article>
+            <span>01</span>
+            <h3>資料量龐大</h3>
+            <p>待處理名片以千張計，單純增加人工時間無法真正消化存量。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>多語格式混亂</h3>
+            <p>中文、韓文、英文、日文名片的排列邏輯不同，辨識後仍需人工判斷。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>重複操作過多</h3>
+            <p>上傳、辨識、修正、排序、下載分散在不同步驟，容易中斷與漏填。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section case-thinking">
+      <div class="case-index">
+        <span>02</span>
+        <p>THE THINKING</p>
+      </div>
+
+      <div class="case-content">
+        <p class="case-kicker">我怎麼思考</p>
+        <h2>不是追求百分之百自動化，而是先減少最浪費注意力的動作。</h2>
+
+        <div class="thinking-map">
+          <div class="thinking-node">
+            <small>INPUT</small>
+            <strong>批次上傳名片</strong>
+          </div>
+          <i>→</i>
+          <div class="thinking-node accent">
+            <small>ASSIST</small>
+            <strong>OCR 先產生初稿</strong>
+          </div>
+          <i>→</i>
+          <div class="thinking-node">
+            <small>VERIFY</small>
+            <strong>人工快速校正</strong>
+          </div>
+          <i>→</i>
+          <div class="thinking-node dark">
+            <small>OUTPUT</small>
+            <strong>統一格式下載</strong>
+          </div>
+        </div>
+
+        <blockquote>
+          OCR 不需要完全取代人工。它只要把「從空白開始輸入」變成「快速確認與修正」，就能改變整個流程。
+        </blockquote>
+
+        <div class="decision-list">
+          <div>
+            <span>保留人工判斷</span>
+            <p>姓名、公司與地址容易因版面與語言產生誤判，因此保留可直接修改的欄位。</p>
+          </div>
+          <div>
+            <span>先優化高頻動作</span>
+            <p>加入 Tab 操作、批次重新命名、固定欄位順序與資料列高亮。</p>
+          </div>
+          <div>
+            <span>輸出必須可接續使用</span>
+            <p>以 CSV 統一匯出，避免資料完成後仍需再次整理與複製。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section case-action">
+      <div class="case-index">
+        <span>03</span>
+        <p>THE ACTION</p>
+      </div>
+
+      <div class="case-content">
+        <p class="case-kicker">我實際做了什麼</p>
+        <h2>從最小可用版本開始，依照實際操作結果持續修正。</h2>
+
+        <div class="action-timeline">
+          <article>
+            <span>STEP 01</span>
+            <h3>整理真實欄位與流程</h3>
+            <p>將姓名、手機、電話、傳真、信箱、公司、部門、職位、網址與地址整理成固定結構。</p>
+          </article>
+          <article>
+            <span>STEP 02</span>
+            <h3>建立批次輸入介面</h3>
+            <p>讓多張名片可以在同一畫面中依序確認，減少反覆開關視窗與切換工具。</p>
+          </article>
+          <article>
+            <span>STEP 03</span>
+            <h3>加入操作輔助功能</h3>
+            <p>新增批次改名、Tab 移動、欄位加寬、列高亮、國旗切換與 CSV 下載。</p>
+          </article>
+          <article>
+            <span>STEP 04</span>
+            <h3>使用後持續 QA</h3>
+            <p>根據實際輸入速度、辨識錯誤與操作卡點，反覆調整欄寬、按鍵與欄位順序。</p>
+          </article>
+        </div>
+
+        <div class="interface-showcase">
+          <div class="interface-window">
+            <div class="interface-topbar">
+              <span></span><span></span><span></span>
+              <b>AI 名片管家</b>
+            </div>
+            <div class="interface-body">
+              <div class="interface-sidebar">
+                <strong>001.jpg</strong>
+                <strong>002.jpg</strong>
+                <strong>003.jpg</strong>
+              </div>
+              <div class="interface-form">
+                <label>姓名 <i>김민지</i></label>
+                <label>公司 <i>ABC Partners</i></label>
+                <label>職位 <i>Manager</i></label>
+                <label class="wide">地址 <i>Seoul, Republic of Korea</i></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-note">
+            <span>DESIGN PRINCIPLE</span>
+            <h3>讓使用者的眼睛和手，都少走一點路。</h3>
+            <p>介面不是為了展示功能，而是讓高頻工作能連續完成、不容易漏掉資料。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section case-result">
+      <div class="case-index">
+        <span>04</span>
+        <p>THE RESULT</p>
+      </div>
+
+      <div class="case-content">
+        <p class="case-kicker">最後產生什麼改變</p>
+        <h2>將一項容易被擱置的重複工作，變成可以穩定推進的流程。</h2>
+
+        <div class="result-grid">
+          <article>
+            <span>效率</span>
+            <h3>批次處理取代逐張切換</h3>
+            <p>單日實際完成 42 張名片建檔，工作不再因為繁瑣操作而反覆中斷。</p>
+          </article>
+          <article>
+            <span>品質</span>
+            <h3>欄位格式更一致</h3>
+            <p>透過固定欄位順序與集中校正，降低資料散落、漏填與格式不一致。</p>
+          </article>
+          <article>
+            <span>方法</span>
+            <h3>建立可持續迭代的工具</h3>
+            <p>不只完成一次任務，也留下可依實際工作需求持續修改的數位流程。</p>
+          </article>
+        </div>
+
+        <div class="learning-note">
+          <p class="eyebrow">WHAT I LEARNED</p>
+          <h3>產品改善不一定始於正式需求，也可能始於一句：「這件事為什麼每天都這麼難做？」</h3>
+          <p>
+            這個專案讓我練習從工作現場辨認問題、拆解流程、設定優先順序，並透過測試與迭代將想法變成真正可使用的工具。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="next-project">
+      <div>
+        <p class="eyebrow">NEXT PROJECT</p>
+        <h2>韓人會 APP<br>產品協作</h2>
+      </div>
+      <a href="index.html#projects">查看所有專案 ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 林凰予</span>
+    <span>AI 名片管家｜Case Study 01</span>
+  </footer>
+</body>
+</html>
