@@ -927,21 +927,6 @@ footer {
   }
 }
 
-.project-case-link {
-  display: inline-flex;
-  margin-top: 22px;
-  padding-bottom: 3px;
-  border-bottom: 2px solid var(--ink);
-  font-weight: 700;
-  transition: 0.22s ease;
-}
-
-.project-case-link:hover {
-  color: var(--violet);
-  border-color: var(--violet);
-  transform: translateX(4px);
-}
-
 
 .contact-section {
   padding-top: 40px;
@@ -1039,5 +1024,37 @@ footer {
   .contact-mail {
     align-items: flex-start;
     word-break: break-all;
+  }
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 24px;
+}
+
+.project-action-link {
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--ink);
+  font-size: 1rem;
+  font-weight: 700;
+  transition:
+    color 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.project-action-link:hover {
+  color: var(--violet);
+  border-color: var(--violet);
+  transform: translateX(4px);
+}
+
+@media (max-width: 760px) {
+  .project-actions {
+    gap: 18px;
   }
 }
