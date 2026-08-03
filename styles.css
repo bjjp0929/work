@@ -1070,7 +1070,8 @@ footer {
 .project-list > .project-card:first-child .project-actions {
   grid-column: 3;
   grid-row: 1;
-  align-self: center;
+align-self: end;
+padding-bottom: 8px;
 }
 
 .project-list > .project-card:first-child .project-icon {
